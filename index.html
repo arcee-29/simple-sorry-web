@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorry na po... 🥺</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="card scene active" id="scene-wake">
+        <h1 class="title">Nakatulugan po kita... 😔</h1>
+        <p>Pindutin mo yung emoji para magising po</p>
+        <div id="emoji-wake" class="emoji bounce">😴</div>
+        <p id="status-text" class="status">Kailangan ko ng 5 pokes mo!</p>
+    </div>
+
+    <div class="card scene hidden" id="scene-apology">
+        <div class="emoji">😳</div>
+        <h1>Gising na po!</h1>
+        <p>Sorry po talaga kung nakatulugan kita kagabi habang magkausap tayo huhu feel ko po kasi kagabi parang gising na gising papo ako tapos kachat kita huhu panaginip ko na pala po yunnn sorryyy pooo talagaa huhu. natulog nmn po ako na ikaw iniisip 👉👈 </p>
+        <p class="question">Bati na po tayo? 🥺</p>
+        <div class="btn-group">
+            <button class="btn btn-primary" id="btn-s1-yes">Oo, bati na tayo! 💕</button>
+            <button class="btn btn-secondary" id="btn-s1-no">Ayoko nga! 😤</button>
+        </div>
+    </div>
+
+    <div class="card scene hidden" id="scene-ask1">
+        <div class="emoji pulse">🥺</div>
+        <h1>Ayaw mo po ba ako patawarin?</h1>
+        <p>Please na po... Promise hindi ko na ulit makakatulugan pag uusap natin mag sasabi na po ako pag antok na po😭, Patawarin mo na po ako? 👉👈</p>
+        <div class="btn-group">
+            <button class="btn btn-primary" id="btn-s2-yes">Oo, patawarin na kita! 💖</button>
+            <button class="btn btn-secondary" id="btn-s2-no">Hindi pa rin! 😤</button>
+        </div>
+    </div>
+
+    <div class="card scene hidden" id="scene-ask2">
+        <div class="emoji shake">😭</div>
+        <h1>Sure ka na ba talaga?</h1>
+        <p>Ayaw mo na po ba sa akin? nagsasawa ka na ba sakin?😭💔</p>
+        <div class="btn-group">
+            <button class="btn btn-danger" id="btn-s3-yes">Oo (Ayaw na talaga)</button>
+            <button class="btn btn-primary" id="btn-s3-no">Hindi (Sigi bati na🥰)</button>
+        </div>
+    </div>
+
+    <div class="card scene hidden" id="scene-sad">
+        <div class="emoji break-heart">💔😭</div>
+        <h1>Aray😔😭... 💔</h1>
+        <p>Ang sakit naman... pero hindi, magmakaawa ulit ako hanggang sa kabatiin mo na ako! 🥺</p>
+        <button class="btn btn-primary" id="btn-loop">Pag isipan mo nmn po ulit please🥺</button>
+    </div>
+
+    <div class="card scene hidden" id="scene-happy">
+        <div class="emoji heartbeat">🥰</div>
+        <h1>Yehey! Happy na ulit! 🎉</h1>
+        <p>Salamat po sa pagtanggap ng sorry ko pooo!❤️✨</p>
+        <!-- Pinalitan natin yung ID ng button para pumunta sa next scene -->
+        <button class="btn btn-primary" id="btn-next-final"> muwahhh3! 💕</button>
+    </div>
+
+    <!-- Idinagdag ang Scene 7: Final Message -->
+    <div class="card scene hidden" id="scene-final">
+        <div class="emoji">😔</div>
+        <p style="font-size: 1.2rem; font-weight: bold; color: #d81b60; margin-top: 15px;">Sorry po, ito lang po nakayanan ko...</p>
+        <p style="margin-top: 10px;">'Di man kasing ganda ng sa iba, 'di man kasing romantic ng sa iba, sana po ma appreciate mo po at sana kung ma open mo na po ito kausapin mo na po sana ulit ako.</p>
+        <p style="font-weight: bold; color: #ff1493;">Muwahh3 ❤️</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
