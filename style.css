@@ -9,23 +9,37 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Animated Gradient Background */
+    background: linear-gradient(-45deg, #ff9a9e, #fecfef, #ffdde1, #ffb199);
+    background-size: 400% 400%;
+    animation: gradientMove 12s ease infinite;
+    font-family: 'Nunito', sans-serif;
     text-align: center;
     padding: 20px;
     overflow: hidden;
 }
 
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
 .card {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 35px 25px;
-    border-radius: 25px;
-    box-shadow: 0 15px 35px rgba(255, 105, 180, 0.35);
-    max-width: 420px;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 40px 30px;
+    border-radius: 30px; /* Mas bilog na edges */
+    box-shadow: 0 20px 40px rgba(255, 105, 180, 0.25), inset 0 0 0 2px rgba(255, 255, 255, 0.7);
+    max-width: 450px;
     width: 100%;
-    backdrop-filter: blur(10px);
-    border: 2px solid #ffffff;
+    backdrop-filter: blur(15px);
     transition: all 0.4s ease;
+    animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Pop effect bawat page */
+}
+
+@keyframes popIn {
+    0% { opacity: 0; transform: scale(0.8) translateY(20px); }
+    100% { opacity: 1; transform: scale(1) translateY(0); }
 }
 
 .hidden {
@@ -34,92 +48,111 @@ body {
 
 .title {
     color: #d81b60;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     margin-bottom: 12px;
+    text-shadow: 1px 1px 2px rgba(255, 105, 180, 0.2);
 }
 
 h1 {
     color: #ff1493;
-    font-size: 1.5rem;
-    margin-bottom: 12px;
+    font-size: 1.7rem;
+    margin-bottom: 15px;
+    font-weight: 900;
 }
 
 p {
     color: #4a4a4a;
-    font-size: 1.05rem;
-    line-height: 1.5;
+    font-size: 1.15rem;
+    line-height: 1.6;
     margin-bottom: 15px;
+    font-weight: 700;
 }
 
 .question {
-    font-weight: bold;
     color: #ff4081;
-    font-size: 1.2rem;
-    margin-top: 15px;
+    font-size: 1.3rem;
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 900;
 }
 
 .status {
-    font-weight: bold;
-    color: #e91e63;
+    background-color: #ffe4e1;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 25px;
+    color: #d81b60;
     font-size: 1.1rem;
+    border: 2px dashed #ff69b4;
+    margin-top: 10px;
 }
 
 .emoji {
-    font-size: 4.5rem;
-    margin: 15px 0;
+    font-size: 5.5rem;
+    margin: 20px 0;
     cursor: pointer;
     user-select: none;
     display: inline-block;
+    filter: drop-shadow(0 15px 15px rgba(0,0,0,0.15)); /* 3D effect sa emojis */
+    transition: transform 0.2s;
+}
+
+.emoji:hover {
+    transform: scale(1.1);
 }
 
 .btn-group {
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    margin-top: 20px;
+    gap: 15px;
+    margin-top: 25px;
 }
 
 .btn {
-    padding: 13px 20px;
+    padding: 16px 25px;
     border: none;
     border-radius: 50px;
-    font-size: 1rem;
-    font-weight: bold;
+    font-size: 1.1rem;
+    font-weight: 900;
     cursor: pointer;
-    transition: all 0.25s ease;
+    transition: all 0.3s ease;
     width: 100%;
+    font-family: 'Nunito', sans-serif; /* Dinamay yung cute font sa buttons */
 }
 
 .btn-primary {
     background: linear-gradient(45deg, #ff69b4, #ff1493);
     color: white;
-    box-shadow: 0 5px 15px rgba(255, 20, 147, 0.4);
+    box-shadow: 0 8px 20px rgba(255, 20, 147, 0.3);
 }
 
 .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(255, 20, 147, 0.6);
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 12px 25px rgba(255, 20, 147, 0.5);
 }
 
 .btn-secondary {
-    background-color: #f0f0f0;
-    color: #666;
-    border: 1px solid #ddd;
+    background-color: #ffffff;
+    color: #ff1493;
+    border: 2px solid #ff69b4;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
 .btn-secondary:hover {
-    background-color: #e2e2e2;
-    color: #333;
+    background-color: #fff0f5;
+    transform: translateY(-2px);
 }
 
 .btn-danger {
-    background-color: #ff5252;
+    background: linear-gradient(45deg, #ff5252, #d50000);
     color: white;
-    box-shadow: 0 4px 12px rgba(255, 82, 82, 0.3);
+    box-shadow: 0 8px 20px rgba(255, 82, 82, 0.3);
 }
 
 .btn-danger:hover {
-    background-color: #ff1744;
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 12px 25px rgba(255, 82, 82, 0.5);
 }
 
 /* Animations */
@@ -129,7 +162,7 @@ p {
 
 @keyframes bounce {
     0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+    50% { transform: translateY(-12px); }
 }
 
 .pulse {
@@ -157,5 +190,5 @@ p {
 
 @keyframes heartbeat {
     0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.25); }
+    50% { transform: scale(1.3); }
 }

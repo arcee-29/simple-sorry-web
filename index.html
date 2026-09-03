@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sorry na po... 🥺</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="card scene active" id="scene-wake">
         <h1 class="title">Nakatulugan po kita... 😔</h1>
-        <p>Pindutin mo yung emoji para magising po</p>
+        <p>Pindutin mo po yung mukha ko para po magising </p>
         <div id="emoji-wake" class="emoji bounce">😴</div>
-        <p id="status-text" class="status">Kailangan ko ng 5 pokes mo!</p>
+        <p id="status-text" class="status">Kailangan ko po ng 5 pokes mo!</p>
     </div>
 
     <div class="card scene hidden" id="scene-apology">
@@ -29,7 +30,7 @@
     <div class="card scene hidden" id="scene-ask1">
         <div class="emoji pulse">🥺</div>
         <h1>Ayaw mo po ba ako patawarin?</h1>
-        <p>Please na po... Promise hindi ko na ulit makakatulugan pag uusap natin mag sasabi na po ako pag antok na po😭, Patawarin mo na po ako? 👉👈</p>
+        <p>Please na po... Promise hindi ko na ulit makakatulugan pag uusap natin mag sasabi na po ako pag antok na po ToT! Patawarin mo na po ako? 👉👈</p>
         <div class="btn-group">
             <button class="btn btn-primary" id="btn-s2-yes">Oo, patawarin na kita! 💖</button>
             <button class="btn btn-secondary" id="btn-s2-no">Hindi pa rin! 😤</button>
@@ -42,31 +43,29 @@
         <p>Ayaw mo na po ba sa akin? nagsasawa ka na ba sakin?😭💔</p>
         <div class="btn-group">
             <button class="btn btn-danger" id="btn-s3-yes">Oo (Ayaw na talaga)</button>
-            <button class="btn btn-primary" id="btn-s3-no">Hindi (Sigi bati na🥰)</button>
+            <button class="btn btn-primary" id="btn-s3-no">Hindi (sigi bati na! 🥰)</button>
         </div>
     </div>
 
     <div class="card scene hidden" id="scene-sad">
         <div class="emoji break-heart">💔😭</div>
         <h1>Aray😔😭... 💔</h1>
-        <p>Ang sakit naman... pero hindi, magmakaawa ulit ako hanggang sa kabatiin mo na ako! 🥺</p>
-        <button class="btn btn-primary" id="btn-loop">Pag isipan mo nmn po ulit please🥺</button>
+        <p>Ang sakit naman... pero hindi! Magmakaawa ulit ako hanggang sa kabatiin mo na ako! 🥺</p>
+        <button class="btn btn-primary" id="btn-loop" style="margin-top: 20px; width: 100%;">Pag isipan mo po ulit please🥺💖</button>
     </div>
 
     <div class="card scene hidden" id="scene-happy">
         <div class="emoji heartbeat">🥰</div>
         <h1>Yehey! Happy na ulit! 🎉</h1>
         <p>Salamat po sa pagtanggap ng sorry ko pooo!❤️✨</p>
-        <!-- Pinalitan natin yung ID ng button para pumunta sa next scene -->
-        <button class="btn btn-primary" id="btn-next-final"> muwahhh3! 💕</button>
+        <button class="btn btn-primary" id="btn-next-final" style="margin-top: 20px; width: 100%;"> muwahhh3! 💕</button>
     </div>
 
-    <!-- Idinagdag ang Scene 7: Final Message -->
     <div class="card scene hidden" id="scene-final">
         <div class="emoji">😔</div>
-        <p style="font-size: 1.2rem; font-weight: bold; color: #d81b60; margin-top: 15px;">Sorry po, ito lang po nakayanan ko...</p>
-        <p style="margin-top: 10px;">'Di man kasing ganda ng sa iba, 'di man kasing romantic ng sa iba, sana po ma appreciate mo po at sana kung ma open mo na po ito kausapin mo na po sana ulit ako.</p>
-        <p style="font-weight: bold; color: #ff1493;">Muwahh3 ❤️</p>
+        <p style="font-size: 1.3rem; font-weight: 900; color: #d81b60; margin-top: 15px;">Sorry po, ito lang po nakayanan ko...</p>
+        <p style="margin-top: 10px; color: #555;">'Di man kasing ganda ng sa iba, 'di man kasing romantic ng sa iba, sana po ma appreciate mo po.</p>
+        <p style="font-weight: 900; color: #ff1493; font-size: 1.5rem; margin-top: 20px;">muwahh3 ❤️</p>
     </div>
 
     <script src="script.js"></script>

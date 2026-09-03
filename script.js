@@ -29,13 +29,13 @@ emojiWake.addEventListener('click', () => {
         statusText.textContent = "Hmm... 5 minutes pa po...";
     } else if (pokesLeft === 3) {
         emojiWake.textContent = "🥱";
-        statusText.textContent = "Wait lang, inaantok pa...";
+        statusText.textContent = "Wait lang po, inaantok pako ihh...";
     } else if (pokesLeft === 2) {
         emojiWake.textContent = "😵‍💫";
-        statusText.textContent = "Ugh... ang sarap pa matulog...";
+        statusText.textContent = "Ihhh... ang sarap papo matulog...";
     } else if (pokesLeft === 1) {
         emojiWake.textContent = "😲";
-        statusText.textContent = "Hala, andiyan ka pala!";
+        statusText.textContent = "AYYY Elaa, ikaw palaa! huhu";
     } else if (pokesLeft === 0) {
         showScene(sceneApology);
     }
